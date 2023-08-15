@@ -124,8 +124,6 @@ requestRolligSlots = (body) => {
 
   fetch(`${url}/api/v1/en/account/registration`, {
     method: "POST",
-    mode: "no-cors",
-    Origin: "http://127.0.0.1:8080",
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
