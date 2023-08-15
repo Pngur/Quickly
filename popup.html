@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Helper</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <form id="form">
+        <div class="main">
+          <div class="main_content">
+            <div class="main_top_col1">
+              <label>Enviroment</label>
+              <select class="browser-default" name="env">
+                <option value="dev">DEV</option>
+                <option value="stage">STAGE</option>
+                <option value="prod" selected>PROD</option>
+              </select>
+            </div>
+            <div class="main_top_col2">
+              <label>Project</label>
+              <select class="browser-default" name="project">
+                <option value="RLS" selected>RollingSlots</option>
+                <option value="NFS">NeedForSpin</option>
+                <option value="WTK">WildTokyo</option>
+              </select>
+            </div>
+          </div>
+          <div class="main_content">
+            <div class="main_middle_col1">
+              <label>Country</label>
+              <select class="browser-default" name="country">
+                <option value="de" selected>DE</option>
+                <option value="ca">CA</option>
+                <option value="au">AU</option>
+              </select>
+            </div>
+            <div class="main_middle_col2">
+              <label>Currency</label>
+              <select class="browser-default" name="currency">
+                <option value="eur" selected>EUR</option>
+                <option value="cad">CAD</option>
+                <option value="huf">HUF</option>
+              </select>
+            </div>
+            <div class="main_middle_col2">
+              <label>Region</label>
+              <select class="browser-default" name="region">
+                <option value="" selected>NO</option>
+                <option value="ont">ONT</option>
+              </select>
+            </div>
+          </div>
+          <div class="main_content">
+            <div class="main_middle_col1">
+              <p>
+                <label>
+                  <input
+                    id="indeterminate-checkbox"
+                    type="checkbox"
+                    name="kyc"
+                  />
+                  <span>KYC</span>
+                </label>
+              </p>
+            </div>
+            <div class="main_middle_col2">
+              <p>
+                <label>
+                  <input
+                    id="indeterminate-checkbox"
+                    type="checkbox"
+                    name="dep"
+                  />
+                  <span>DEP</span>
+                </label>
+              </p>
+            </div>
+          </div>
+          <button type="submit" id="submitBtn" class="button">QUICK</button>
+        </div>
+      </form>
+      <div class="result">
+        <input type="text" id="output" readonly class="output" />
+        <button id="copyBtn" class="copy-button">Copy</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

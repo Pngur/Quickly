@@ -1,0 +1,131 @@
+body {
+  min-height: 400px;
+  font-size: 15px;
+  background-color: #5c5380;
+}
+
+select {
+  font-weight: 100;
+}
+
+form {
+  background-color: #5c5380;
+  width: 300px;
+}
+
+label {
+  color: #2c3e50 !important;
+  font-weight: 500;
+}
+
+select,
+select:focus {
+  border: transparent !important;
+  outline: #f2f1f1 !important;
+  cursor: pointer;
+}
+
+main {
+  width: 300px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 5px 10px 5px;
+  background-color: white;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 100%;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 15px 0 10px 0;
+  background-color: #e84a11;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button.loading,
+.button.success,
+.button.error {
+  cursor: default;
+  pointer-events: none;
+}
+
+.button.loading {
+  background-color: #95a5a6;
+}
+
+.button.success {
+  background-color: #2ecc71;
+}
+
+.button.error {
+  background-color: #e74c3c;
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.result {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.output {
+  padding: 8px;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  flex-grow: 1;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.copy-button {
+  padding: 8px 12px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #34495e;
+}
