@@ -126,6 +126,7 @@ requestRolligSlots = (body) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
+      'Host': 'https://rollingslots.com',
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Request-Method": "POST",
       "Access-Control-Request-Headers": "Content-Type",
