@@ -145,7 +145,7 @@ requestRolligSlots = (body) => {
 
 console.log("fwefwefwefwef");
 
-axios.post(URL, dataToPost, headers)
+axios.post(URL, requestBody, headers)
   .then(response => {
     console.log(response.data);
   })
