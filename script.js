@@ -122,9 +122,8 @@ requestRolligSlots = (body) => {
       break;
   }
 
-  fetch(`${url}/api/v1/en/account/registration`, {
-    method: "POST",
-    mode: "no-cors",
+  const URL = `${url}/api/v1/en/account/registration`;
+  const config = {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
@@ -132,18 +131,49 @@ requestRolligSlots = (body) => {
       "Access-Control-Request-Headers": "Content-Type",
       "Cross-Origin-Resource-Policy": "same-site",
     },
+    mode: "no-cors"
+  };
 
-    body: JSON.stringify(requestBody),
+  const headers = new Headers({
+    "Content-Type": "application/json",  
+    "Access-Control-Allow-Origin": "https://rollingslots.com",
+    "Content-Length": String(body.length),
+    "Origin":"https://rollingslots.com"
+  });
+
+
+console.log("fwefwefwefwef");
+
+axios.post(URL, dataToPost, headers)
+  .then(response => {
+    console.log(response.data);
   })
-    .then((response) => {
-      console.log();
-      if (!response.ok) {
-        throw new Error(`ERROR: ${response.status} ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .then((data) => console.log(data))
-    .catch((error) => console.error("ERROR:", error));
+  .catch(error => {
+    console.log('Error posting the data', error);
+  });
+
+  // fetch(`${url}/api/v1/en/account/registration`, {
+  //   method: "POST",
+  //   mode: "no-cors",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Request-Method": "POST",
+  //     "Access-Control-Request-Headers": "Content-Type",
+  //     "Cross-Origin-Resource-Policy": "same-site",
+  //   },
+
+  //   body: JSON.stringify(requestBody),
+  // })
+  //   .then((response) => {
+  //     console.log();
+  //     if (!response.ok) {
+  //       throw new Error(`ERROR: ${response.status} ${response.statusText}`);
+  //     }
+  //     return response.json();
+  //   })
+  //   .then((data) => console.log(data))
+  //   .catch((error) => console.error("ERROR:", error));
 };
 
 generatePhone = (countryCode = "373") => {
